@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ruby-sinatra:
+    build: ./
+    container_name: ruby-heroku
+    stdin_open: true
+    tty: true
+    ports:
+      - 3000:4000
+    volumes:
+      - ./:/usr/src/app
